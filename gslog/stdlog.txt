@@ -1,0 +1,2 @@
+[name1]	[name2]	Kill	[weapon]	1	[ping]
+[name3]		Suicide	[weapon]	-1	[ping]

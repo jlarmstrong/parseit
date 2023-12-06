@@ -1,0 +1,5 @@
+LIBRARY		BASE
+DESCRIPTION	"Standard parser module"
+EXPORTS
+	loadKillMsgs	@1
+	parseLine		@2

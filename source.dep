@@ -1,0 +1,49 @@
+# Microsoft Developer Studio Generated Dependency File, included by source.mak
+
+.\configFile.cpp : \
+	".\configFile.h"\
+	".\StdAfx.h"\
+	
+
+.\htmlFormatter.cpp : \
+	".\htmlFormatter.h"\
+	".\playerList.h"\
+	".\StdAfx.h"\
+	
+
+.\myLog.cpp : \
+	".\myLog.h"\
+	".\StdAfx.h"\
+	
+
+.\playerList.cpp : \
+	".\playerList.h"\
+	".\StdAfx.h"\
+	
+
+.\serverLog.cpp : \
+	"..\..\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	".\base\dlldata.h"\
+	".\dynamiclibrary.h"\
+	".\myLog.h"\
+	".\parsemodule.h"\
+	".\playerList.h"\
+	".\serverLog.h"\
+	".\StdAfx.h"\
+	
+
+.\serverStat.cpp : \
+	"..\..\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	".\base\dlldata.h"\
+	".\configFile.h"\
+	".\dynamiclibrary.h"\
+	".\htmlFormatter.h"\
+	".\parsemodule.h"\
+	".\playerList.h"\
+	".\serverLog.h"\
+	".\StdAfx.h"\
+	
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	

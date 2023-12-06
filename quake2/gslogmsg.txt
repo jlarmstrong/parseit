@@ -1,0 +1,2 @@
+[name2]		Suicide
+[name1]		[name2]	Kill

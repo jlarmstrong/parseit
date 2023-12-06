@@ -1,0 +1,286 @@
+0.0	info	Log_Standard	ngLog
+0.0	info	Log_Version	1.2
+0.0	info	Log_Info_URL	http://www.netgamesusa.com/ngLog/
+0.0	info	Game_Name	Quake II
+0.0	info	Game_Author	id SOftware, Inc.
+0.0	info	Game_Author_URL	http://www.idsoftware.com
+0.0	info	Game_Version	3.20 x86 Oct 16 1998 Win32 RELEASE
+0.0	info	Game_Patch	tourney
+0.0	info	Game_Patch_Name	OSP Tourney DM
+0.0	info	Game_Patch_Version	1.10d
+0.0	info	Game_Patch_Decoder_Ring_URL	http://www.netgamesusa.com/ngLog/tourney
+0.0	info	Game_Patch_Author	Orange Smoothie Productions
+0.0	info	Game_Patch_Author_URL	http://www.planetquake.com/osp
+0.0	info	Server_Address	129.237.125.39
+0.0	info	Server_Port	27912
+0.0	info	Absolute_Time	1999.01.30.12.29.20.84.-6.0
+0.0	Game_Init	1999.01.30.12.29.20.84.-6.0
+0.0	info	match_mode	RegularDM
+0.0	info	timelimit	20
+0.0	info	fraglimit	40
+0.0	info	dmflags	17428
+0.0	info	maxclients	24
+0.0	info	hostname	OSP Tourney DM - DeathMatch
+0.0	info	hook_status	DISABLED
+0.0	info	disabled_items	NONE
+0.0	info	map	q2dm2	Tokay's Towers
+0.0	Game_Start
+9.8	Observe	Gen Patton	1	0
+11.4	Observe	[BD]Spawn	2	0
+11.5	Observe	Damocles	3	0
+18.1	Player_Enter	Damocles	3
+18.1	Player_Respawn	3
+19.7	Observe	buba	0
+20.6	Player_Enter	Gen Patton	1
+20.6	Player_Respawn	1
+20.7	Player_Enter	[BD]Spawn	2
+20.7	Player_Respawn	2
+28.5	Player_Enter	buba	0
+28.5	Player_Respawn	0
+29.1	Kill	2	Rocket Launcher	1	183	1	Grenade Launcher	0	237
+30.2	Player_Respawn	1
+32.1	Item_Pickup	Quad	99	3	323
+32.1	Item_Use	Quad	99	3	323
+53.8	Kill	2	Rocket Launcher	1	231	0	Shotgun	0	342
+56.8	Player_Respawn	0
+59.1	Player_Connect	mr.body
+62.2	Item_Expire	Quad	99
+67.6	Observe	mr.body	0
+73.7	Kill	1	Chaingun	1	255	2	Chaingun	0	235
+74.8	Player_Respawn	2
+78.0	Chasecam	mr.body	4	111
+81.2	Player_Leave	[BD]Spawn	2
+93.1	Player_Enter	mr.body	4
+93.1	Player_Respawn	4
+112.1	Item_Pickup	Quad	99	1	231
+112.1	Item_Use	Quad	99	1	231
+121.0	Kill	4	Railgun	1	114	1	Chaingun	0	257
+121.0	Item_Drop	Quad	99	131	1
+122.3	Player_Respawn	1
+128.2	Kill	4	Railgun	1	112	1	Chaingun	0	218
+129.4	Player_Respawn	1
+142.1	Item_Expire	Quad	131
+146.1	Kill	4	Railgun	1	111	1	Machinegun	0	262
+147.2	Player_Respawn	1
+158.1	Kill	4	Railgun	1	110	3	Rocket Launcher	0	331
+158.3	Kill	3	Rocket Launcher	1	333	4	Railgun	0	111
+161.9	Player_Respawn	4
+162.2	Player_Respawn	3
+175.6	Item_Pickup	Quad	99	3	323
+175.6	Item_Use	Quad	99	3	323
+183.4	Kill	1	Chaingun	1	249	0	Machinegun	0	338
+187.5	Player_Respawn	0
+198.6	Kill	4	Railgun	1	118	1	Chaingun	0	265
+199.7	Player_Respawn	1
+202.4	Kill	3	Super Shotgun	1	329	4	Railgun	0	115
+203.5	Player_Respawn	4
+205.7	Item_Expire	Quad	99
+220.1	Suicide	1	Rocket Launcher	-1	264
+221.4	Player_Respawn	1
+236.7	Kill	3	Rocket Launcher	1	333	0	Shotgun	0	335
+237.8	Player_Respawn	0
+256.1	Kill	4	Rocket Launcher	1	116	3	Railgun	0	323
+256.1	Suicide	4	Rocket Launcher	-1	116
+257.2	Player_Respawn	3
+257.2	Player_Respawn	4
+271.9	Kill	1	Shotgun	1	246	0	Shotgun	0	325
+273.0	Player_Respawn	0
+289.1	Kill	1	Shotgun	1	242	0	Machinegun	0	312
+292.9	Player_Respawn	0
+296.8	Kill	3	Railgun	1	328	1	Shotgun	0	231
+298.0	Player_Respawn	1
+309.4	Kill	4	Rocket Launcher	1	113	0	Grenades	0	313
+310.5	Player_Respawn	0
+322.2	Kill	4	Rocket Launcher	1	113	3	Railgun	0	327
+323.5	Player_Respawn	3
+337.6	Kill	4	Railgun	1	109	0	Machinegun	0	311
+338.7	Player_Respawn	0
+363.2	Kill	3	Rocket Launcher	1	362	1	Chaingun	0	242
+366.5	Player_Connect	Mythodikal{Y2K}
+367.3	Player_Respawn	1
+373.4	Chat	Gen Patton: bye buba
+375.1	Observe	Mythodikal{Y2K}	2	0
+378.5	Player_Leave	Gen Patton	1
+380.0	Chasecam	Mythodikal{Y2K}	2	76
+387.3	Player_Enter	Mythodikal{Y2K}	2
+387.3	Player_Respawn	2
+392.1	Kill	4	Railgun	1	113	3	Rocket Launcher	0	308
+394.6	Player_Respawn	3
+397.6	Kill	4	Railgun	1	113	0	Machinegun	0	343
+401.7	Player_Respawn	0
+403.6	Kill	4	Railgun	1	114	2	Rocket Launcher	0	80
+404.7	Player_Respawn	2
+406.3	Item_Pickup	Quad	99	4	111
+406.3	Item_Use	Quad	99	4	111
+436.4	Item_Expire	Quad	99
+441.8	Kill	2	Rocket Launcher	1	87	4	Rocket Launcher	0	113
+443.1	Player_Respawn	4
+452.5	Kill	3	Rocket Launcher	1	316	0	Machinegun	0	344
+456.6	Player_Respawn	0
+463.2	Player_Leave	buba	0
+473.5	Kill	2	Rocket Launcher	1	76	4	Blaster	0	111
+474.6	Player_Respawn	4
+494.9	Kill	2	Rocket Launcher	1	74	3	Rocket Launcher	0	309
+497.2	Player_Respawn	3
+501.3	Player_Connect	Nexus_1
+515.4	Observe	Nexus_1	0
+525.4	Kill	2	Rocket Launcher	1	81	4	Railgun	0	120
+525.7	Player_Enter	Nexus_1	0
+525.7	Player_Respawn	0
+529.5	Player_Respawn	4
+551.1	Item_Pickup	Quad	99	3	325
+551.1	Item_Use	Quad	99	3	325
+557.8	Kill	3	Rocket Launcher	1	340	2	Rocket Launcher	0	84
+557.8	Suicide	3	Rocket Launcher	-1	340
+557.8	Item_Drop	Quad	99	136	3
+558.9	Player_Respawn	2
+561.9	Player_Respawn	3
+570.9	Kill	0	Grenade Launcher	1	260	4	Rocket Launcher	0	112
+571.7	Kill	0	Grenade Launcher	1	270	3	Grenades	0	326
+572.1	Player_Respawn	4
+572.9	Player_Respawn	3
+581.1	Item_Expire	Quad	136
+582.4	Kill	0	Railgun	1	237	4	Shotgun	0	111
+583.5	Player_Respawn	4
+587.1	Kill	0	Railgun	1	258	4	Blaster	0	113
+588.2	Player_Respawn	4
+588.6	Kill	2	Rocket Launcher	1	85	3	Grenade Launcher	0	331
+592.7	Player_Respawn	3
+597.1	Kill	4	Rocket Launcher	1	117	3	Blaster	0	325
+598.7	Player_Respawn	3
+609.0	Kill	2	Rocket Launcher	1	79	0	Railgun	0	270
+610.1	Player_Respawn	0
+612.4	Kill	2	Rocket Launcher	1	87	4	Rocket Launcher	0	110
+613.6	Player_Respawn	4
+623.3	Kill	2	Rocket Launcher	1	81	0	Shotgun	0	257
+624.4	Player_Respawn	0
+659.8	Kill	2	Rocket Launcher	1	80	3	Rocket Launcher	0	338
+663.9	Player_Respawn	3
+672.7	Kill	4	Grenade Launcher	1	113	0	Rocket Launcher	0	255
+672.7	Suicide	4	Grenade Launcher	-1	113
+673.8	Player_Respawn	0
+674.4	Player_Respawn	4
+675.2	Item_Pickup	Quad	99	3	351
+675.2	Item_Use	Quad	99	3	351
+680.5	Kill	0	Grenades	1	241	2	Rocket Launcher	0	86
+681.6	Player_Respawn	2
+683.4	Player_Connect	Begbie
+693.7	Observe	Begbie	0
+703.1	Chasecam	Begbie	176
+705.3	Item_Expire	Quad	99
+711.9	Chasecam	Begbie	215
+717.0	Kill	2	Rocket Launcher	1	78	3	Machinegun	0	330
+718.1	Player_Respawn	3
+718.1	Player_Enter	Begbie	1
+718.1	Player_Respawn	1
+731.0	Kill	2	Rocket Launcher	1	83	0	Grenade Launcher	0	261
+732.1	Player_Respawn	0
+733.6	Kill	1	Grenades	1	222	2	Rocket Launcher	0	81
+734.7	Player_Respawn	2
+743.7	Kill	2	Rocket Launcher	1	80	3	Chaingun	0	333
+743.9	Kill	0	Grenade Launcher	1	276	2	Rocket Launcher	0	81
+744.8	Player_Respawn	3
+745.0	Player_Respawn	2
+750.8	Kill	2	Rocket Launcher	1	78	1	Chaingun	0	215
+751.9	Player_Respawn	1
+776.6	Kill	4	Railgun	1	112	0	Rocket Launcher	0	240
+777.7	Player_Respawn	0
+784.0	Item_Pickup	Quad	99	0	234
+784.0	Item_Use	Quad	99	0	234
+785.4	Kill	4	Rocket Launcher	1	114	3	Railgun	0	316
+786.5	Player_Respawn	3
+788.1	Kill	0	Super Shotgun	1	243	3	Blaster	0	339
+789.4	Player_Respawn	3
+795.7	Kill	1	Rocket Launcher	1	209	3	Chaingun	0	335
+796.8	Player_Respawn	3
+802.0	Kill	0	Blaster	1	253	4	Rocket Launcher	0	116
+803.3	Player_Respawn	4
+808.4	Kill	2	Rocket Launcher	1	81	4	Super Shotgun	0	119
+809.5	Player_Respawn	4
+811.5	Kill	2	Rocket Launcher	1	84	0	Rocket Launcher	0	281
+811.5	Item_Drop	Quad	99	135	0
+812.6	Player_Respawn	0
+814.0	Item_Expire	Quad	135
+818.2	Kill	1	Rocket Launcher	1	214	3	Rocket Launcher	0	333
+819.3	Player_Respawn	3
+837.6	Kill	2	Rocket Launcher	1	82	3	Rocket Launcher	0	339
+839.8	Player_Respawn	3
+840.8	Kill	4	Rocket Launcher	1	119	2	Rocket Launcher	0	84
+841.9	Player_Respawn	2
+842.0	Kill	0	Railgun	1	278	1	Rocket Launcher	0	244
+843.1	Player_Respawn	1
+845.4	Kill	0	Railgun	1	271	4	Rocket Launcher	0	119
+846.6	Player_Respawn	4
+854.9	Kill	2	Rocket Launcher	1	83	4	Rocket Launcher	0	127
+856.0	Player_Respawn	4
+856.3	Kill	2	Rocket Launcher	1	93	3	Rocket Launcher	0	375
+857.5	Player_Respawn	3
+873.7	Kill	1	Grenade Launcher	1	212	2	Rocket Launcher	0	90
+874.8	Player_Respawn	2
+885.0	Player_Connect	Pipe Monkey
+900.1	Suicide	2	Rocket Launcher	-1	94
+900.1	Kill	2	Rocket Launcher	1	94	3	Grenade Launcher	0	352
+901.2	Player_Respawn	2
+901.2	Player_Respawn	3
+905.5	Kill	0	Rocket Launcher	1	270	3	Blaster	0	326
+905.8	Kill	2	Rocket Launcher	1	89	1	Chaingun	0	242
+907.3	Player_Respawn	3
+907.4	Player_Respawn	1
+913.5	Kill	1	Rocket Launcher	1	223	3	Chaingun	0	343
+914.6	Player_Respawn	3
+939.1	Kill	0	Rocket Launcher	1	268	2	Rocket Launcher	0	93
+940.2	Player_Respawn	2
+943.7	Kill	3	Rocket Launcher	1	322	1	Rocket Launcher	0	228
+947.8	Player_Respawn	1
+953.1	Kill	2	Super Shotgun	1	90	4	Super Shotgun	0	126
+954.2	Player_Respawn	4
+960.9	Suicide	3	Rocket Launcher	-1	328
+963.3	Player_Respawn	3
+966.6	Kill	0	Rocket Launcher	1	561	2	Super Shotgun	0	94
+967.7	Player_Respawn	2
+981.3	Kill	2	Rocket Launcher	1	94	1	Rocket Launcher	0	202
+984.6	Item_Pickup	Quad	99	0	633
+984.6	Item_Use	Quad	99	0	633
+984.9	Player_Respawn	1
+988.7	Kill	4	Railgun	1	121	1	Blaster	0	208
+990.7	Player_Respawn	1
+1004.0	Kill	4	Railgun	1	123	0	Rocket Launcher	0	280
+1004.0	Item_Drop	Quad	99	130	0
+1005.1	Player_Respawn	0
+1011.2	Kill	4	Railgun	1	118	0	Super Shotgun	0	358
+1012.4	Player_Respawn	0
+1014.6	Item_Expire	Quad	130
+1018.1	Kill	4	Railgun	1	134	2	Rocket Launcher	0	94
+1018.9	Kill	1	Rocket Launcher	1	233	3	Grenade Launcher	0	340
+1019.2	Player_Respawn	2
+1021.4	Player_Respawn	3
+1028.0	Player_Leave	Nexus_1	0
+1052.8	Kill	1	Rocket Launcher	1	229	3	Rocket Launcher	0	348
+1053.8	Suicide	2	Rocket Launcher	-1	98
+1054.9	Player_Respawn	2
+1056.9	Player_Respawn	3
+1070.1	Kill	1	Rocket Launcher	1	187	2	Rocket Launcher	0	87
+1071.2	Player_Respawn	2
+1082.3	Player_Connect	Pipe Monkey
+1097.1	Kill	4	Railgun	1	117	2	Rocket Launcher	0	96
+1098.2	Player_Respawn	2
+1121.7	Kill	4	Rocket Launcher	1	123	2	Rocket Launcher	0	92
+1122.8	Player_Respawn	2
+1128.6	Kill	1	Rocket Launcher	1	228	4	Rocket Launcher	0	131
+1129.8	Player_Respawn	4
+1135.4	Item_Pickup	Quad	99	1	206
+1135.4	Item_Use	Quad	99	1	206
+1139.2	Kill	3	Grenade Launcher	1	379	1	Rocket Launcher	0	223
+1139.2	Item_Drop	Quad	99	135	1
+1140.3	Player_Respawn	1
+1161.1	Kill	4	Railgun	1	124	3	Grenade Launcher	0	321
+1162.3	Kill	2	Rocket Launcher	1	87	4	Railgun	0	137
+1163.6	Player_Respawn	4
+1165.2	Player_Respawn	3
+1165.4	Item_Expire	Quad	135
+1169.9	Player_Connect	SFS>SWaits
+1185.3	Kill	4	Railgun	1	129	1	Rocket Launcher	0	198
+1185.5	Kill	2	Rocket Launcher	1	88	3	Chaingun	0	341
+1186.4	Player_Respawn	1
+1186.6	Player_Respawn	3
+1200.0	Game_End	timelimit

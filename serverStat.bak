@@ -1,0 +1,210 @@
+// serverStat.cpp : Defines the entry point for the console application.
+
+
+#include <sys/types.h>
+#include <time.h>
+
+#include "StdAfx.h"
+#include "configFile.h"
+#include "killMsg.h"
+#include "playerList.h"
+#include "serverLog.h"
+#include "htmlFormatter.h"
+
+#include "base\dlldata.h"
+
+typedef int (*PFNLOADKILLMSGS)(char *);
+typedef int (*PFNPARSELINE)(char *, returnMsg *);
+
+void exit_usage(char *);
+
+#ifdef _WIN32
+#define WIN32_LEAN_AND_MEAN
+#include <windows.h>
+#endif
+
+
+/* ********* Main ********************************************************* */
+
+int main(int argc, char* argv[])
+{
+    char filename[STRMAX+1] = { "config.ini" };
+    int sleepTime = 0;
+    configFile cf;
+
+	PFNLOADKILLMSGS pfnLoadKillMsgs;
+	PFNPARSELINE pfnParseLine;
+
+    for (int i = 1; i < argc; i++) {
+        if (*argv[i] != '-') exit_usage(argv[0]);
+	
+
+	if (!strcmp(argv[i], "-c") || !strcmp(argv[i], "--config")) {
+	    if (++i >= argc) exit_usage(argv[0]);
+	    strncpy(filename, argv[i], STRMAX);
+	}
+	else if (!strcmp(argv[i], "-s") || !strcmp(argv[i], "--sleep")) {
+	    if (++i >= argc) exit_usage(argv[0]);
+	    sleepTime = atoi(argv[i]) * SLEEP_MULTIPLIER;
+	    if (sleepTime < 0) sleepTime = 0;
+	}
+	else {
+	    exit_usage(argv[0]);
+	}
+    }
+
+    do {
+        if (!cf.openConfig(filename)) break;
+
+	while (cf.readConfig() == TRUE) {
+		// load the module
+		cout<<"Loading the parser module ... "<<endl;
+#ifdef _WIN32
+		HMODULE hModule = LoadLibrary(cf.getModule());
+		if (hModule == NULL)
+		{
+			cout<<"  Module file could not be loaded. Exiting program ... "<<endl;
+			exit(1);
+		}
+
+		pfnLoadKillMsgs = (PFNLOADKILLMSGS) GetProcAddress(hModule, "loadKillMsgs");
+		if (pfnLoadKillMsgs == NULL)
+		{
+			FreeLibrary(hModule);
+			cout<<"  Module is missing vital loadKillMsgs function. Exiting program ... "<<endl;
+			exit(1);
+		}
+
+		pfnParseLine = (PFNPARSELINE) GetProcAddress(hModule, "parseLine");
+		if (pfnParseLine == NULL)
+		{
+			FreeLibrary(hModule);
+			cout<<"  Module is missing vital parseLine function. Exiting program ... "<<endl;
+			exit(1);
+		}
+#endif
+
+	    // process this stuff
+	    cout<<"Reading the kill file message templates ... "<<endl;
+		//killMsg *km = new killMsg(cf.getMsg());
+#ifdef _WIN32
+		int nReturn = pfnLoadKillMsgs(cf.getMsg());
+		if (nReturn == FALSE)
+		{
+			FreeLibrary(hModule);
+			exit(1);
+		}
+#endif
+
+	    cout<<"Reading previous daily player list ... "<<endl;
+	    playerList *daily = new playerList();
+	    //cout<<"Deleting previous day's daily player list ... "<<endl;
+	    //daily->deletePlayerFile(cf.getDaily());
+	    daily->readList(cf.getDaily(), cf.getExpired());
+
+	    cout<<"Reading master player list ... "<<endl;
+	    playerList *master = new playerList();
+	    master->readList(cf.getList(),cf.getExpired());
+
+	    cout<<"Processing the server's log ... "<<endl;
+	    serverLog *server = new serverLog(cf.getLog(), cf.getStatusFile());
+	    //server->processServerLog(km, master, daily);
+		server->processServerLog(pfnParseLine, master, daily);
+
+	    cout<<"Processing master player list ... "<<endl;
+	    master->processPlayerList(cf.getList());
+	    // delete the one from the day before 
+	    cout<<"Processing today's daily player list ..."<<endl;
+	    daily->processPlayerList(cf.getDaily());
+
+	    cout<<"Writing master list html file ..."<<endl;
+	    htmlFormatter *masterHtml = new htmlFormatter(cf.getMTmpl(), 
+		    cf.getHtmList(), master);
+	    masterHtml->writeHtml();
+
+	    cout<<"Writing daily list html file ..."<<endl;
+	    htmlFormatter *dailyHtml = new htmlFormatter(cf.getDTmpl(), 
+		    cf.getHtmDaily(), daily);
+	    dailyHtml->writeHtml();
+
+	    cout<<"Cleaning up ..."<<endl;
+	    //cout<<"  delete kill msg"<<endl;
+	    //delete km;
+		cout<<"   freeing module"<<endl;
+#ifdef _WIN32
+		FreeLibrary(hModule);
+#endif
+	    cout<<"   delete master"<<endl;
+	    delete master;
+	    cout<<"   delete daily"<<endl;
+	    delete daily;
+	    cout<<"   delete server"<<endl;
+	    delete server;
+	    cout<<"   delete masterHtml"<<endl;
+	    delete masterHtml;
+	    cout<<"   delete dailyHtml"<<endl;
+	    delete dailyHtml; 
+
+	    cout<<"   delete config"<<endl;
+	    cf.deleteConfig();
+	}
+
+	cf.closeConfig();
+
+	if (sleepTime) {
+	    cout<<"Sleeping for "<<sleepTime<<" seconds..."<<endl;
+	    SLEEP(sleepTime);
+    	}
+    } while (sleepTime);
+
+    cout<<"ALL DONE"<<endl;
+    return 0;
+}
+
+/* **************** Print Usage and Exit ********************************* */
+void exit_usage(char *argv0)
+{
+    printf("Usage: %s [OPTION]...\n", argv0);
+    printf("\n");
+    printf("  Optional arguments are listed as follows:\n");
+    printf("\n");
+    printf("    -s NUM, --sleep NUM         sleep NUM seconds between checks\n");
+    printf("    -c FILE, --config FILE      use FILE as configuration file\n");
+    printf("\n");
+
+    exit(1);
+}
+
+/* **************** Return date as MMM DD YYYY *************************** */
+char* getdatetime (char* t_d)
+{
+ 
+   //struct timeb timebuffer;
+   time_t timebuffer;
+   char *timeline;
+
+   //ftime( &timebuffer );
+   //timeline = ctime( & ( timebuffer.time ) );
+   timebuffer = time(0);
+   timeline = ctime ( &timebuffer );
+
+   strncpy(t_d, &timeline[4],7);
+   t_d[7] = '\0';
+   strncat(t_d, &timeline[20],4);
+   return t_d;
+}	
+
+/* ********* Write to an errlog log ************************************** */
+void writeerror(char* err)
+{ 
+    char date[STRMAX+1];
+    FILE *fptr;
+
+    fptr = fopen("ERROR.txt","a");
+    if (fptr) {
+	getdatetime (date);
+        fprintf(fptr, "[%s] %s\n", date, err);
+        fprintf(stderr, "[%s] %s\n", date, err);
+        fclose(fptr);
+    } 
+}

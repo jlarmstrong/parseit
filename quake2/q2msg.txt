@@ -1,0 +1,40 @@
+[name2] was blasted by [name1]
+[name2] was gunned down by [name1]
+[name2] was blown away by [name1]'s super shotgun
+[name2] was machinegunned by [name1]
+[name2] was cut in half by [name1]'s chaingun
+[name2] was popped by [name1]'s grenade
+[name2] was shredded by [name1]'s shrapnel
+[name2] ate [name1]'s rocket
+[name2] almost dodged [name1]'s rocket
+[name2] was melted by [name1]'s hyperblaster
+[name2] was railed by [name1]
+[name2] saw the pretty lights from [name1]'s BFG
+[name2] was disintegrated by [name1]'s BFG blast
+[name2] couldn't hide from [name1]'s BFG
+[name2] caught [name1]'s handgrenade
+[name2] didn't see [name1]'s handgrenade
+[name1] feels [name2]'s pain
+[name2] tried to invade [name1]'s personal space
+[name2] was caught by [name1]'s grapple
+[name3] suicides
+[name3] cratered
+[name3] was squished
+[name3] sank like a rock
+[name3] melted
+[name3] does a back flip into the lava
+[name3] blew up
+[name3] found a way out
+[name3] saw the light
+[name3] got blasted
+[name3] was in the wrong place
+[name3] tried to put the pin back in
+[name3] tripped on her own grenade
+[name3] tripped on his own grenade
+[name3] blew herself up
+[name3] blew himself up
+[name3] died
+[name3] should have used a smaller gun
+[name3] killed herself
+[name3] killed himself
+[cap] captured the enemy flag

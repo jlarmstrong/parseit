@@ -1,0 +1,46 @@
+// serverLog.h: interface for the serverLog class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#if !defined(AFX_SERVERLOG_H__8F4AB1A2_65C7_11D2_B761_00C0F02907C3__INCLUDED_)
+#define AFX_SERVERLOG_H__8F4AB1A2_65C7_11D2_B761_00C0F02907C3__INCLUDED_
+
+#if _MSC_VER > 1000
+#pragma once
+#endif // _MSC_VER > 1000
+
+#include "base\killMsg.h"
+#include "playerList.h"
+#include "base\dlldata.h"
+
+typedef int (*PFNPARSELINE)(char *, returnMsg *);
+
+class serverLog  
+{
+public:
+	serverLog(char *serverLogName, char *serverStatusFile);
+	~serverLog();
+	int processServerLog(PFNPARSELINE pfnParseLine, playerList *ml, playerList *dl);
+
+private:
+	char _serverLogName[STRMAX+1];
+	char _serverStatusFile[STRMAX+1];
+	FILE *_logPtr;
+	char _serverEntry[STRMAX+1];
+	int  _name1pos;
+	int  _name1len;
+	int  _name2pos;
+	int  _name2len;
+	int  _winner;
+	long _numread;
+	long _numLastRead;
+	char _serverLog[STRMAX+1];
+	int  openServerLog();
+	int  readServerEntry();
+	int  parseEntry(killMsg *kmPtr);
+	int  findkillMessage(char *pattern1, char *pattern2, char delim1, char delim2);
+	void updateList(playerList *pl, returnMsg *pReturn);
+
+};
+
+#endif // !defined(AFX_SERVERLOG_H__8F4AB1A2_65C7_11D2_B761_00C0F02907C3__INCLUDED_)

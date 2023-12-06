@@ -1,0 +1,3 @@
+[time]	[value]	[clientname]	[clientpointer]
+[time]	Kill [clientid] [weapon] [points] [ping] [clientid2] [weapon2] [points2] [ping2]
+[time]	Suicide [clientid]	[weapon]	[points]	[ping]
